@@ -24,6 +24,34 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;}
 
+.neon-blink {
+		color: #fff;
+		text-shadow: 0 0 5px #fff,
+					 0 0 10px #fff,
+					 0 0 15px #fff,
+					 0 0 20px #FF00E0,
+					 0 0 30px #FF00E0,
+					 0 0 40px #FF00E0,
+					 0 0 50px #FF00E0,
+					 0 0 75px #FF00E0;
+		animation: blink 1s infinite;
+	  }
+	  
+	  @keyframes blink {
+		0% {
+		  opacity: 1;
+		}
+		50% {
+		  opacity: 0;
+		}
+		100% {
+		  opacity: 1;
+		}
+	  }
+	  
+
+
+	
 body {
 	line-height: 1;
 }
@@ -152,9 +180,22 @@ input, select, textarea {
 		color: inherit;
 	}
 
-		a:hover {
-			border-bottom-color: transparent;
+	a:not(.no-effect):hover {
+		border-bottom-color: transparent;
+		color: #1d75c7;
+		letter-spacing: 1.0em;
+		animation-name: spread-letters;
+		  animation-duration: 0.5s;			
+	}
+
+	@keyframes spread-letters {
+		0% {
+		  letter-spacing: 0.05em;
 		}
+		100% {
+		  letter-spacing: 1.0em;
+		}
+	  }
 
 	strong, b {
 		color: #ffffff;
@@ -211,6 +252,7 @@ input, select, textarea {
 
 	h4 {
 		font-size: 0.8rem;
+		text-shadow: 0 0 10px #2dccc4, 0 0 20px #9edd39, 0 0 30px #535ebd, 0 0 40px #9e6cb6, 0 0 70px #ff00de, 0 0 80px #ac4f76, 0 0 100px #ff00de, 0 0 150px #ff00de;
 	}
 
 	h5 {
