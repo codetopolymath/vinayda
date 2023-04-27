@@ -16,8 +16,22 @@
 				<!-- Header -->
 					<header id="header">
 						<div class="logo">
-							<span class="icon fa-diamond"></span>
+							<img src="./images/profilepic.png" alt="profilepic">
+							<!-- <span class="icon fa-diamond"></span> -->
 						</div>
+						<style>
+							.logo {
+							  width: 100px; /* adjust size as needed */
+							  height: 100px; /* adjust size as needed */
+							  border-radius: 50%; /* make the container circular */
+							  overflow: hidden; /* clip the image to the container */
+							}
+							.logo img {
+							  width: 100%; /* make the image fill the container */
+							  height: 100%; /* make the image fill the container */
+							  object-fit: fill; /* preserve aspect ratio and crop if necessary */
+							}
+						  </style>
 						<div class="content">
 							<div class="inner">
 								<h1>Vishwanath Kamble</h1>
